@@ -1,97 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        body {
-            font-family: Arial, serif;
-            background-color: #f0f0f0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        form {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #000000;
-            width: 70%;
-            color: white;
-            border: none;
-            display: block;
-            padding: 10px;
-            font-size: 20px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Поиск</title>
 </head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Убирает отступы вокруг body */
+    padding: 20px; /*Добавляет внутренние отступы в 20 пикселей*/
+    background: #f4f4f4;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    display: flex; /* Использует флексбокс для размещения элементов внутри формы */
+    flex-direction: column; /* Располагает дочерние элементы в колонку */
+    border: 5px solid #ddd; /* Добавляет рамку светло-серого цвета */
+    padding: 20px; /* Добавляет внутренние отступы в 20 пикселей */
+    background: white; /* Устанавливает белый цвет фона для формы */
+  }
+
+  h2 {
+    color: #0066cc;
+  }
+
+  input, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  input {
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background: #0047cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  button:hover {
+    transform: scale(1.025); /* Увеличивает кнопку на 10% при наведении */
+    color: #000;
+  }
+</style>
+
 <body>
-    <h1>Microsoft Edge</h1>
-    <form action="https://www.bing.com/search" method="GET">
-        <input type="text" name="q" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Google Chrome</h1>
-    <form action="https://www.google.com/search" method="GET">
-        <input type="text" name="q" placeholder="Пишите" required>
-        <button type="submit">Найти</button>
-    </form>
-    <h1>Firefox</h1>
-    <form action="https://www.qwant.com/" method="GET">
-        <input type="text" name="q" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Safari</h1>
-    <form action="https://www.ecosia.org/search" method="GET">
-        <input type="text" name="q" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Yandex Browser</h1>
-    <form action="https://www.yandex.com/search/" method="GET">
-        <input type="text" name="text" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Vivaldi</h1>
-    <form action="https://search.brave.com/search" method="GET">
-        <input type="text" name="q" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Opera</h1>
-    <form action="https://duckduckgo.com/" method="GET">
-        <input type="text" name="q" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Yahoo</h1>
-    <form action="https://search.yahoo.com/search" method="GET">
-        <input type="text" name="p" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>Baidu</h1>
-    <form action="https://www.baidu.com/s" method="GET">
-        <input type="text" name="wd" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
-    <h1>StartPage</h1>
-    <form action="https://www.startpage.com/do/search" method="GET">
-        <input type="text" name="query" placeholder="Пишите" required>
-        <button type="submit">Search</button>
-    </form>
+<h1>Топ 10 поисковиков</h1>
+
+<form action="https://www.google.com/search" method="GET">
+  <h2>Google</h2>
+  <input type="text" name="q" placeholder="Поиск в Google" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://www.bing.com/search" method="GET">
+  <h2>Bing</h2>
+  <input type="text" name="q" placeholder="Поиск в Bing" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://duckduckgo.com/" method="GET">
+  <h2>DuckDuckGo</h2>
+  <input type="text" name="q" placeholder="Поиск в DuckDuckGo" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://search.yahoo.com/search" method="GET">
+  <h2>Yahoo</h2>
+  <input type="text" name="q" placeholder="Поиск в Yahoo" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://www.startpage.com/do/search" method="GET">
+  <h2>Startpage</h2>
+  <input type="text" name="query" placeholder="Поиск в Startpage" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://www.ecosia.org/search" method="GET">
+  <h2>Ecosia</h2>
+  <input type="text" name="q" placeholder="Поиск в Ecosia" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://search.brave.com/search" method="GET">
+  <h2>Brave</h2>
+  <input type="text" name="q" placeholder="Поиск в Brave" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://www.qwant.com/?q=" method="GET">
+  <h2>Qwant</h2>
+  <input type="text" name="q" placeholder="Поиск в Qwant" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://www.yandex.com/search/" method="GET">
+  <h2>Yandex</h2>
+  <input type="text" name="text" placeholder="Поиск в Yandex" required>
+  <button type="submit">Найти</button>
+</form>
+
+<form action="https://www.baidu.com/s" method="GET">
+  <h2>Baidu</h2>
+  <input type="text" name="wd" placeholder="Поиск в Baidu" required>
+  <button type="submit">Найти</button>
+</form>
 </body>
+
 </html>
